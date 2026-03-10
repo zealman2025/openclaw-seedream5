@@ -4,18 +4,9 @@ OpenClaw 技能：使用火山引擎豆包 Seedream 5.0 生成或编辑图片。
 
 ## 安装
 
-### 方式一：手动安装
-
-```bash
-# 克隆或下载到你的 OpenClaw workspace skills 目录
-git clone https://github.com/zealman2025/openclaw-seedream5.git /path/to/workspace/skills/seedream5
-```
-
-### 方式二：clawhub 安装（若已注册到 ClawHub）
-
-```bash
-clawhub install seedream5
-```
+1. 从 [GitHub](https://github.com/zealman2025/openclaw-seedream5) 下载或克隆本仓库
+2. 将下载后的内容放置在 OpenClaw 的 skills 目录内，确保路径为 `workspace/skills/seedream5/`（含 SKILL.md 和 scripts/）
+   - 或通过 `openclaw.json` 的 `skills.load.extraDirs` 指向该目录
 
 ## 配置 API Key
 
