@@ -4,7 +4,17 @@ OpenClaw 技能：使用火山引擎豆包 Seedream 5.0 生成或编辑图片。
 
 ## 安装
 
+> 以下路径使用 OpenClaw 默认目录。`~` 表示用户主目录（等同于 `$HOME`），非本设备专用路径。
+
 ### 方式一：ClawHub 官方商店（推荐）
+
+**安装到内置/全局目录**（对所有 agent 可用，推荐）：
+
+```bash
+clawhub install seedream5 --workdir ~/.openclaw --dir skills
+```
+
+**安装到当前 workspace**（仅当前项目可用）：
 
 ```bash
 clawhub install seedream5
@@ -16,20 +26,25 @@ clawhub install seedream5
 openclaw config set skills.entries.seedream5.apiKey "你的火山引擎API_KEY"
 ```
 
-
 ### 方式二：手动安装
 
 仓库结构为 `openclaw-seedream5/seedream5/`（技能内容在 `seedream5` 子目录内）。
 
 1. 从 [GitHub](https://github.com/zealman2025/openclaw-seedream5) 下载或克隆本仓库
-2. 将 `seedream5` 文件夹复制到 OpenClaw 的 `workspace/skills/` 目录内
+
+2. **内置安装**（推荐，全局可用）：
 
    ```bash
    git clone https://github.com/zealman2025/openclaw-seedream5.git
-   cp -r openclaw-seedream5/seedream5 /path/to/workspace/skills/
+   mkdir -p ~/.openclaw/skills
+   cp -r openclaw-seedream5/seedream5 ~/.openclaw/skills/
    ```
 
-   最终路径：`workspace/skills/seedream5/`（含 SKILL.md、scripts/、README.md）
+3. **或安装到 workspace**（仅当前项目）：
+
+   ```bash
+   cp -r openclaw-seedream5/seedream5 /path/to/workspace/skills/
+   ```
 
    若放置在其他路径，可在 `openclaw.json` 的 `skills.load.extraDirs` 中指向该目录的父级。
 
@@ -47,7 +62,7 @@ export ARK_API_KEY="你的API_KEY"
 
 ### 方式二：openclaw.json（推荐）
 
-编辑 `~/.openclaw/openclaw.json`，在 `skills.entries` 下添加：
+编辑 OpenClaw 默认配置 `~/.openclaw/openclaw.json`，在 `skills.entries` 下添加：
 
 ```json
 {
