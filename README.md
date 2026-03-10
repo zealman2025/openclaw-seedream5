@@ -8,7 +8,7 @@ OpenClaw 技能：使用火山引擎豆包 Seedream 5.0 生成或编辑图片。
 
 ```bash
 # 克隆或下载到你的 OpenClaw workspace skills 目录
-git clone https://github.com/你的用户名/seedream5.git /path/to/workspace/skills/seedream5
+git clone https://github.com/zealman2025/openclaw-seedream5.git /path/to/workspace/skills/seedream5
 ```
 
 ### 方式二：clawhub 安装（若已注册到 ClawHub）
